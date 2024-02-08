@@ -14,5 +14,9 @@ router.post("/add",async(req,res)=>{
    ) 
 
 })
+router.get("/view",async(req,res)=>{
+    let data=await patientmodel.find()
+    res.send(data)
+})
 
 module.exports=router
